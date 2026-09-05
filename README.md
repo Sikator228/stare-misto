@@ -7,4 +7,8 @@
 - 5 банкетних меню, галерея, контакти
 - Mobile-first: нижня таб-панель, safe-area, лайтбокс фото з ціною та вагою
 
-Деплой: GitHub Pages з гілки `main` (корінь). Будь-який push у `main` оновлює сайт.
+## Деплой
+
+- **Прод:** https://staremisto.nemesis.industries — VPS NEMESIS, nginx роздає `/home/deploy/stare-misto` (vhost у `nemesis-army/infra/nginx-portals.conf`), Cloudflare проксований A-запис `staremisto`.
+- **Оновити прод:** `ssh nemesis-deploy 'cd /home/deploy/stare-misto && git pull'` (nginx reload не потрібен).
+- **Стейджинг:** GitHub Pages з `main` — https://sikator228.github.io/stare-misto/ (оновлюється кожним push автоматично).
